@@ -7,7 +7,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/tv_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -21,7 +21,7 @@
         tools:text="My First Note"/>
 
     <TextView
-        android:id="@+id/date"
+        android:id="@+id/tv_date"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -33,7 +33,7 @@
         tools:text="2/26/2018"/>
 
     <View
-        android:id="@+id/divider"
+        android:id="@+id/v_divider"
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:background="@color/grey"
