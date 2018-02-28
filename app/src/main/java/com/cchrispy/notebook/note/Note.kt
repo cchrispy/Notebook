@@ -1,16 +1,16 @@
 package com.cchrispy.notebook.note
 
-import android.content.Context
-import android.support.constraint.ConstraintLayout
-import android.util.AttributeSet
-import com.cchrispy.notebook.R
+import java.util.*
 
 /**
  * Created by chrischiang on 2/26/18.
  */
-class Note(ctx: Context, attrs: AttributeSet? = null, defStyle: Int = 0) : ConstraintLayout(ctx, attrs, defStyle) {
+open class Note {
 
-    init {
-        inflate(ctx, R.layout.note, this)
-    }
+    var title:  String? = null
+    var text:   String? = null
+    var date:   Date?   = null
+
+    open fun getDateFormatted(date: Date) = "TODO" // TODO
+
 }

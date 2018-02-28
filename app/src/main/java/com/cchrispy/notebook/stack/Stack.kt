@@ -1,17 +1,17 @@
 package com.cchrispy.notebook.stack
 
-import android.content.Context
-import android.support.constraint.ConstraintLayout
-import android.util.AttributeSet
-import com.cchrispy.notebook.R
+import com.cchrispy.notebook.note.Note
+import java.util.*
 
 /**
- * Created by chrischiang on 2/26/18.
+ * Created by chrischiang on 2/27/18.
  */
-class Stack(ctx: Context, attrs: AttributeSet? = null, defStyle: Int = 0) : ConstraintLayout(ctx, attrs, defStyle) {
+open class Stack {
+    var title: String? = null
+    var date: Date? = null
+    var notes: MutableList<Note>? = null
 
-    init {
-        inflate(ctx, R.layout.stack, this)
-    }
+    open fun getDateFormatted(date: Date) = "TODO" // TODO
 
+    open fun addNote(note: Note) = notes?.add(note)
 }
