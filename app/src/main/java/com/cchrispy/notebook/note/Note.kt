@@ -49,4 +49,7 @@ open class Note {
     open fun getStackCount() = stacks.size
 
     open fun isInStack(stack: Stack) = stacks.contains(stack)
+
+    open fun pin() = "TODO" // TODO
+    open fun unpin() = "TODO" // TODO
 }
