@@ -16,6 +16,7 @@ open class Stack {
     var title: String? = null
     var starred: Boolean = false
     var dateCreated: Date? = null
+    var order: Order = Order.CHRONOLOGICAL
     val notes: MutableList<Note> = mutableListOf()
 
     open fun getDateFormatted(date: Date) = "TODO" // TODO
@@ -26,29 +27,21 @@ open class Stack {
 
     open fun containsNote(note: Note) = notes.contains(note)
 
-    fun getStarredNotes(): List<Note> {
-        val starredNotes = mutableListOf<Note>()
-        notes.forEach({ if (it.starred) starredNotes.add(it) })
-        return starredNotes
-    }
+    fun getStarredNotes() = notes.filter { it.starred }
 
-    fun getCategoryNotes(category: Category): List<Note> {
-        val categoryNotes = mutableListOf<Note>()
-        notes.forEach({ if (it.category == category) categoryNotes.add(it) })
-        return categoryNotes
-    }
+    fun getCategoryNotes(category: Category) = notes.filter { it.category == category}
 
     fun getCategories(): Set<Category> {
         val categories = mutableSetOf<Category>()
-        notes.forEach({
-//            it.category?.apply {  } // TODO: add to categories
-        })
+        notes.forEach { it.category?.let { categories.add(it) } }
         return categories
     }
 
-    fun getStarredNotesCount(): Int = getStarredNotes().size
+    fun getStarredNotesCount() = getStarredNotes().size
 
-    fun getCategoryNoteCount(category: Category): Int = getCategoryNotes(category).size
+    fun getCategoryNoteCount(category: Category) = getCategoryNotes(category).size
+
+    fun getCategoryCount() = getCategories().size
 
     fun moveNoteToFront(note: Note) {
         val index = notes.indexOf(note)
