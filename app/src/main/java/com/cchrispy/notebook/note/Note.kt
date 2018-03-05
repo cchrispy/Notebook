@@ -16,11 +16,12 @@ open class Note {
 
     private var TAG = "Note"
 
-    var title:          String? = null
-    var text:           String? = null
-    var dateNotify:     Date?   = null
-    var dateCreated:    Date?   = null
-    var category:       Category? = null
+    var title:          String?     = null
+    var text:           String?     = null
+    var dateNotify:     Date?       = null
+    var dateCreated:    Date?       = null
+    var category:       Category?   = null
+    var starred:        Boolean     = false
     var stacks:         MutableSet<Stack> = mutableSetOf()
 
     open fun getDateNotifyFormatted(date: Date) = "TODO" // TODO
