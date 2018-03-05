@@ -8,7 +8,7 @@ import java.util.*
  */
 open class Stack {
     var title: String? = null
-    var date: Date? = null
+    var dateCreated: Date? = null
     var notes: MutableList<Note>? = null
 
     open fun getDateFormatted(date: Date) = "TODO" // TODO

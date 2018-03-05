@@ -11,6 +11,6 @@ open class Book {
 
     var title: String? = null
     var stacks: List<Stack>? = null
-    var date: Date? = null
+    var dateCreated: Date? = null
 
 }
