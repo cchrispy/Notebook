@@ -43,6 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <EditText
+        android:id="@+id/et_note_input"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="8dp"
@@ -51,6 +52,16 @@
         app:layout_constraintTop_toBottomOf="@+id/v_divider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toTopOf="@+id/v_options"/>
+
+    <View
+        android:id="@+id/v_options"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_height="120dp"
+        tools:background="#33FFFF00"/>
 
 </android.support.constraint.ConstraintLayout>
